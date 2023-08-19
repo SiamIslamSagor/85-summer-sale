@@ -49,10 +49,11 @@
             <!-- Kitchenware -->
             <h3 class="font-semibold text-4xl mt-12 py-12">Kitchenware</h3>
             <div
-              class="grid grid-cols-1 justify-items-center max-md:gap-7 lg:grid-cols-3"
+              class="grid grid-cols-1 justify-items-center max-lg:gap-7 lg:grid-cols-3"
             >
               <div
                 class="bg-white rounded-lg space-y-4 p-5 w-[340px] text-center"
+                onclick="handelClick(this)"
               >
                 <div
                   class="bg-gray-100 rounded-lg p-5 flex items-center justify-center h-[200px] w-[300px]"
@@ -94,6 +95,7 @@
 
               <div
                 class="bg-white rounded-lg space-y-4 p-5 w-[340px] text-center"
+                onclick="handelClick(this)"
               >
                 <div
                   class="bg-gray-100 rounded-lg p-5 flex items-center justify-center h-[200px] w-[300px]"
@@ -129,17 +131,18 @@
                     class="mask mask-star-2 bg-orange-400"
                   />
                 </div>
-                <p class="font-semibold text-xl">L. Accessories</p>
+                <p class="font-semibold text-xl">C. Accessories</p>
                 <p class="text-xl font-normal text-gray-500">25.00 TK</p>
               </div>
 
               <div
                 class="bg-white rounded-lg space-y-4 p-5 w-[340px] text-center"
+                onclick="handelClick(this)"
               >
                 <div
                   class="bg-gray-100 rounded-lg p-5 flex items-center justify-center h-[200px] w-[300px]"
                 >
-                  <img src="./images/prod1.png" alt="" />
+                  <img src="./images/prod3.png" alt="" />
                 </div>
                 <!-- rating -->
                 <div class="rating">
@@ -170,18 +173,19 @@
                     class="mask mask-star-2 bg-orange-400"
                   />
                 </div>
-                <p class="font-semibold text-xl">K. Accessories</p>
-                <p class="text-xl font-normal text-gray-500">39.00 TK</p>
+                <p class="font-semibold text-xl">Home Cooker</p>
+                <p class="text-xl font-normal text-gray-500">49.00 TK</p>
               </div>
             </div>
 
             <!-- Sportswear -->
             <h3 class="font-semibold text-4xl py-12">Sportswear</h3>
             <div
-              class="grid grid-cols-1 justify-items-center max-md:gap-7 lg:grid-cols-3"
+              class="grid grid-cols-1 justify-items-center max-lg:gap-7 lg:grid-cols-3"
             >
               <div
                 class="bg-white rounded-lg space-y-4 p-5 w-[340px] text-center"
+                onclick="handelClick(this)"
               >
                 <div
                   class="bg-gray-100 rounded-lg p-5 flex items-center justify-center h-[200px] w-[300px]"
@@ -223,6 +227,7 @@
 
               <div
                 class="bg-white rounded-lg space-y-4 p-5 w-[340px] text-center"
+                onclick="handelClick(this)"
               >
                 <div
                   class="bg-gray-100 rounded-lg p-5 flex items-center justify-center h-[200px] w-[300px]"
@@ -264,6 +269,7 @@
 
               <div
                 class="bg-white rounded-lg space-y-4 p-5 w-[340px] text-center"
+                onclick="handelClick(this)"
               >
                 <div
                   class="bg-gray-100 rounded-lg p-5 flex items-center justify-center h-[200px] w-[300px]"
@@ -307,10 +313,11 @@
             <!-- Furniture -->
             <h3 class="font-semibold text-4xl py-12">Sportswear</h3>
             <div
-              class="grid grid-cols-1 justify-items-center max-md:gap-7 lg:grid-cols-3"
+              class="grid grid-cols-1 justify-items-center max-lg:gap-7 lg:grid-cols-3"
             >
               <div
                 class="bg-white rounded-lg space-y-4 p-5 w-[340px] text-center"
+                onclick="handelClick(this)"
               >
                 <div
                   class="bg-gray-100 rounded-lg p-5 flex items-center justify-center h-[200px] w-[300px]"
@@ -352,6 +359,7 @@
 
               <div
                 class="bg-white rounded-lg space-y-4 p-5 w-[340px] text-center"
+                onclick="handelClick(this)"
               >
                 <div
                   class="bg-gray-100 rounded-lg p-5 flex items-center justify-center h-[200px] w-[300px]"
@@ -393,6 +401,7 @@
 
               <div
                 class="bg-white rounded-lg space-y-4 p-5 w-[340px] text-center"
+                onclick="handelClick(this)"
               >
                 <div
                   class="bg-gray-100 rounded-lg p-5 flex items-center justify-center h-[200px] w-[300px]"
@@ -449,7 +458,9 @@
                   placeholder="Coupon code"
                 />
                 <button
+                  onclick="reload()"
                   class="text-white bg-fuchsia-600 py-6 px-6 rounded-r-lg"
+                  
                 >
                   Apply
                 </button>
@@ -458,25 +469,25 @@
             <div
               class="bg-white rounded-lg space-y-5 px-5 pt-5 w-[340px] text-xl font-medium"
             >
-              <div id="cartEntry" class="space-y-5"></div>
+              <div id="cartEntryName" class="space-y-5"></div>
               <div class="h-[1px] w-[290px] bg-gray-300"></div>
               <div class="space-y-5">
                 <p>
-                  Total price: <span id="" class="text-gray-500">00.00</span
+                  Total price: <span id="total-price" class="text-gray-500">00.00</span
                   ><span class="text-gray-500">TK</span>
                 </p>
                 <p>
-                  Discount: <span id="" class="text-gray-500">00.00</span
+                  Discount: <span id="discount" class="text-gray-500">00.00</span
                   ><span class="text-gray-500">TK</span>
                 </p>
                 <p>
-                  Total: <span id="" class="text-gray-500">00.00</span
+                  Total: <span id="total" class="text-gray-500">00.00</span
                   ><span class="text-gray-500">TK</span>
                 </p>
               </div>
               <div class="h-[1px] w-[290px] bg-gray-300"></div>
               <button
-                class="py-4 px-20 bg-fuchsia-600 text-white rounded-lg relative top-7"
+                class="btn py-4 px-20 bg-fuchsia-600 text-white rounded-lg relative top-7"
               >
                 Make Purchase
               </button>
@@ -489,5 +500,7 @@
     <div class="h-[300px]"></div>
 
     <footer></footer>
+
+    <script src="./js/index.js"></script>
   </body>
 </html>
