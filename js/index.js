@@ -53,6 +53,3 @@ function reloadPage() {
   location.reload();
 }
 
-// const totalPrice = document.getElementById('total-price');
-// totalPrice.innerText = total.toFixed(2);
-// console.log(total)
